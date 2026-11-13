@@ -1,0 +1,19 @@
+/* Extra styling: keep the original chat stylesheet intact. */
+html, body { min-height:100%; }
+body { background-color:var(--bg-color,#090810); background-repeat:no-repeat; background-attachment:fixed; background-size:cover; background-position:center; }
+#app { min-height:calc(100dvh - 85px); height:auto; }
+.navbar-container { height:70px; margin-bottom:12px; }
+.layout { height:calc(100dvh - 97px); min-height:420px; background:transparent; }
+#chat { background:color-mix(in srgb,var(--bg-color,#090810) 78%,transparent); }
+#rail { background:color-mix(in srgb,var(--bg-color,#090810) 88%,transparent); }
+#sidebar, .members { background:color-mix(in srgb,var(--bg-2-color,#171527) 88%,transparent); }
+@media(max-width:620px){.layout{height:calc(100dvh - 110px)}.navbar-container{height:auto;min-height:70px}}
+.emoji-toggle{height:44px;min-width:44px;border-radius:12px}
+.emoji-picker{position:fixed;z-index:90;right:18px;bottom:82px;width:min(320px,calc(100vw - 28px));padding:12px;display:grid;grid-template-columns:repeat(8,1fr);gap:5px;background:var(--side);border:1px solid var(--line);border-radius:14px;box-shadow:0 16px 50px #0007}
+.emoji-picker button{border:0;border-radius:8px;background:transparent;padding:7px 2px;font-size:21px;cursor:pointer}.emoji-picker button:hover{background:var(--raise)}
+.owner-tools{position:fixed;z-index:85;right:16px;bottom:16px;border:1px solid var(--accent);background:var(--side);color:var(--text);border-radius:999px;padding:10px 14px;font-weight:700;cursor:pointer;box-shadow:0 8px 28px #0006}
+.owner-panel{position:fixed;z-index:86;inset:8% 5%;margin:auto;width:min(680px,90vw);max-height:84dvh;overflow:auto;padding:18px;background:var(--side);color:var(--text);border:1px solid var(--line);border-radius:16px;box-shadow:0 24px 70px #0009}
+.owner-panel h2{margin:0 0 8px}.owner-panel .owner-close{float:right}.owner-panel .owner-row{display:flex;align-items:center;flex-wrap:wrap;gap:8px;padding:10px 0;border-bottom:1px solid var(--line)}
+.owner-panel .owner-row strong{flex:1;min-width:130px}.owner-panel input,.owner-panel select{background:var(--panel);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:8px;max-width:100%}
+.owner-panel .owner-row button{font-size:12px}.chat-tag{display:inline-block;margin-left:6px;padding:1px 6px;border-radius:6px;background:var(--raise);color:var(--accent);font-size:10px;font-weight:800;vertical-align:middle}
+@media(max-width:620px){.owner-panel{inset:4% 3%;width:94vw}.owner-panel .owner-row{align-items:flex-start}}
